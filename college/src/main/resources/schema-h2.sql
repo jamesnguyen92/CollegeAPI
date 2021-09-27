@@ -1,9 +1,25 @@
 DROP TABLE IF EXISTS College;
 
 CREATE TABLE College (
-    name VARCHAR(100),
-    inState INT,
-    outState INT,
-    housing INT,
-    PRIMARY KEY(name)
+    NAME VARCHAR(100),
+    IN_STATE DOUBLE,
+    OUT_STATE DOUBLE,
+    HOUSING DOUBLE,
+    PRIMARY KEY(NAME)
+);
+
+DROP TABLE IF EXISTS College_No_House;
+
+CREATE TABLE College_No_House (
+    NAME VARCHAR(100),
+    COST DOUBLE,
+    PRIMARY KEY(NAME)
+);
+
+DROP TABLE IF EXISTS College_House;
+
+CREATE TABLE College_House (
+    NAME VARCHAR(100),
+    COST DOUBLE,
+    PRIMARY KEY(NAME)
 );

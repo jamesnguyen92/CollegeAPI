@@ -2,48 +2,49 @@ package com.takehome.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GenericGenerator;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "College")
 public class CollegeInfo {
 	@Id
 	@Column(name = "name")
 	private String collegeName;
-	@Column(name = "inState")
-    private Long inStateTuition;
-	@Column(name = "outState")
-    private Long outOfStateTuition;
+	@Column(name = "in_state")
+    private double inStateTuition = 0;
+	@Column(name = "out_state")
+    private double outOfStateTuition = 0;
 	@Column(name = "housing")
-    private Long roomAndBoard;
+    private double housing = 0;
+	
 	public String getCollegeName() {
 		return collegeName;
 	}
 	public void setCollegeName(String collegeName) {
 		this.collegeName = collegeName;
 	}
-	public Long getInStateTuition() {
+	public double getInStateTuition() {
 		return inStateTuition;
 	}
-	public void setInStateTuition(Long inStateTuition) {
+	public void setInStateTuition(double inStateTuition) {
 		this.inStateTuition = inStateTuition;
 	}
-	public Long getOutOfStateTuition() {
+	public double getOutOfStateTuition() {
 		return outOfStateTuition;
 	}
-	public void setOutOfStateTuition(Long outOfStateTuition) {
+	public void setOutOfStateTuition(double outOfStateTuition) {
 		this.outOfStateTuition = outOfStateTuition;
 	}
-	public Long getRoomAndBoard() {
-		return roomAndBoard;
+	public double getHousing() {
+		return housing;
 	}
-	public void setRoomAndBoard(Long roomAndBoard) {
-		this.roomAndBoard = roomAndBoard;
+	public void setHousing(double housing) {
+		this.housing = housing;
 	}
+	
 	
 }
